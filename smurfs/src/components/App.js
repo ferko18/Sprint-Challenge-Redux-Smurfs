@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
 import CreateSmurfForm from "./CreateSmurfForm";
 import Smurfs from "./Smurfs";
 /*
@@ -12,8 +12,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <CreateSmurfForm />
         <Smurfs />
-        {/* <CreateSmurfForm /> */}
       </div>
     );
   }
