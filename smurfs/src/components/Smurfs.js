@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { fetchSmurfs } from "../actions";
+import "./App.css";
 
 class Smurfs extends React.Component {
   componentDidMount() {
@@ -9,9 +10,9 @@ class Smurfs extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='smurfs'>
         {this.props.smurfs.map(smurf => (
-          <div key={smurf.id}>
+          <div className='smurf' key={smurf.id}>
             <h1>{smurf.name}</h1>
             <h2>{smurf.age}</h2>
             <h2>{smurf.height}</h2>

@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import { addNewSmurf } from '../actions';
+import "./App.css";
 
 class CreateSmurfForm extends React.Component {
     state = {
@@ -22,7 +23,7 @@ class CreateSmurfForm extends React.Component {
 
     render(){
         return (
-            <div>
+            <div className='formsubmit'>
                 <form onSubmit={this.onSubmit}>
                     <input name ='name' value={this.state.name} type='text' onChange={this.onChange} placeholder='Name'/>
                     <input name ='age' value={this.state.age} type='number' onChange={this.onChange} placeholder='Age'/>
