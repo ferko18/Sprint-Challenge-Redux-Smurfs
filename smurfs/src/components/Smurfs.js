@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { fetchSmurfs } from "../actions";
 import "./App.css";
+import Smurf from './Smurf'
 
 class Smurfs extends React.Component {
   componentDidMount() {
@@ -11,13 +12,7 @@ class Smurfs extends React.Component {
   render() {
     return (
       <div className='smurfs'>
-        {this.props.smurfs.map(smurf => (
-          <div className='smurf' key={smurf.id}>
-            <h1>{smurf.name}</h1>
-            <h2>{smurf.age}</h2>
-            <h2>{smurf.height}</h2>
-          </div>
-        ))}
+        {this.props.smurfs.map(smurf=>(<Smurf smurf={smurf} key={smurf.id} />))}
       </div>
     );
   }
@@ -34,3 +29,13 @@ export default connect(
   mapStateToProps,
   { fetchSmurfs }
 )(Smurfs);
+
+
+
+// {this.props.smurfs.map(smurf => (
+//     <div className='smurf' key={smurf.id}>
+//       <h1>{smurf.name}</h1>
+//       <h2>{smurf.age}</h2>
+//       <h2>{smurf.height}</h2>
+//     </div>
+//   ))}
